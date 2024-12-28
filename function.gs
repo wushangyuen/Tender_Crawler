@@ -114,7 +114,7 @@ function fetchTableData() {
               const viewLinkMatch = /<a href="([^"]+)">([\s\S]*?)<\/a>/gi.exec(cellMatch[1]);
               if (viewLinkMatch) {
                 const tenderLinkId = viewLinkMatch[1].match(/pk=([^&]+)/)[1];
-                viewLink = `https://web.pcc.gov.tw/tps/tp/SearchProcurementPredictWithoutSso/QueryProcurementPredictDetail?pkTpGpaPredict=${tenderLinkId}`;
+                viewLink = `https://web.pcc.gov.tw/tps/QueryTender/query/searchTenderDetail?pkPmsMain=${tenderLinkId}`;
               }
               break;
           }
